@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Salalalala Frozen Food</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">Salalala</div>
+    <nav>
+      <ul>
+        <li><a href="#" data-slide="0">Beranda</a></li>
+        <li><a href="#" data-slide="1">Tentang</a></li>
+        <li><a href="#" data-slide="2">Produk</a></li>
+        <li><a href="#" data-slide="3">Kontak</a></li>
+        <li><a href="#" id="loginBtn" class="login-button">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Container Slides -->
+  <section class="hero">
+    <div class="slides">
+      <!-- Slide 1 -->
+      <div class="slide slide1">
+        <div class="hero-content">
+          <h1>Salalalala Frozen Food</h1>
+          <p>Nikmati Frozen Food bercitarasa Nusantara!</p>
+          <a href="#" class="cta-button" data-slide="2">Produk Kami</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide slide2">
+        <div class="hero-content">
+          <h1>Tentang Kami</h1>
+          <p>Kami menghadirkan makanan lezat, bergizi, dan berkualitas tinggi.</p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide slide3">
+        <div class="hero-content">
+          <h1>Produk Kami</h1>
+          <p>Frozen food bercitarasa Nusantara, cocok untuk semua lidah.</p>
+          <a href="produk.html" class="cta-button">Lihat Produk</a>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="slide slide4">
+        <div class="hero-content">
+          <h1>Kontak Kami</h1>
+          <p>Hubungi kami untuk pemesanan & kerjasama:</p>
+          <ul class="kontak-list">
+            <li>Nommensen (082113918528)</li>
+            <li>Noval (0895616384747)</li>
+            <li>Alwin (082117419565)</li>
+            <li>Desmon (08886073876)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tombol Navigasi -->
+    <button class="prev" aria-label="Slide sebelumnya">&#10094;</button>
+    <button class="next" aria-label="Slide berikutnya">&#10095;</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Salalalala frozen food.</p>
+  </footer>
+
+  <!-- LOGIN MODAL -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Login</h2>
+      <form>
+        <label>Email</label>
+        <input type="email" placeholder="Masukkan email" required />
+        <label>Password</label>
+        <input type="password" placeholder="Masukkan password" required />
+        <button type="submit" class="cta-button">Masuk</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

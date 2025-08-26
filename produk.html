@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    :root{
+      --bg:#000000;
+      --muted:#f5a003;
+      --accent:#f39c12;
+      --card:#f9ae00;
+      --section-pad:60px;
+      --max-width:1100px;
+      --container-pad:20px;
+      font-family: "Salalala", Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#f88400;line-height:3}
+    a{color:inherit;text-decoration:none}
+
+    /* Header / Navbar */
+    .header{
+      position:fixed;left:0;right:0;top:0;z-index:50;
+      display:flex;align-items:center;justify-content:center;
+      padding:18px var(--container-pad);
+      background:linear-gradient(to bottom, rgba(249, 249, 249, 0.159), rgba(0,0,0,0));
+      backdrop-filter: blur(2px);
+    }
+    .nav-inner{width:100%;max-width:var(--max-width);display:flex;align-items:center;justify-content:space-between;position:relative}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo img{height:40px}
+    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;align-items:center}
+    nav ul li a{opacity:0.95;font-weight:500;color:#ffaa00}
+    nav .btn{
+      background:var(--accent);color:#000000;padding:8px 14px;border-radius:6px;font-weight:700
+    }
+
+    /* Tombol Back */
+    .back-btn{
+      position:absolute;
+      left:0;
+      top:50%;
+      transform:translateY(-50%);
+      background:var(--accent);
+      color:#000;
+      padding:6px 12px;
+      border-radius:6px;
+      font-weight:600;
+      cursor:pointer;
+      border:none;
+    }
+
+    /* Hero */
+    .hero{
+      margin-top:80px;
+      min-height:520px;
+      background-image:url('bk b oss].jpg');
+      background-size:cover;background-position:center;
+      display:flex;align-items:flex-start;justify-content:center;
+      position:relative;color:#fff;
+    }
+    .hero::after{
+      content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.85));
+    }
+    .hero .hero-inner{position:relative;z-index:2;width:100%;max-width:var(--max-width);padding:60px var(--container-pad);display:flex;gap:30px;align-items:flex-start}
+    .hero .left{flex:1;max-width:620px;}
+    .hero h1{margin:0;font-size:44px;letter-spacing:1px}
+    .hero p.lead{color:var(--muted);margin-top:14px;max-width:520px}
+    .hero .cta{margin-top:18px}
+    .hero .cta a{background:transparent;border:1px solid rgba(255,255,255,0.18);padding:10px 14px;border-radius:6px;color:#fff}
+
+    /* Product carousel area (light bg) */
+    .products{
+      background:#efefef;color:#111;padding:54px 0;
+    }
+    .products .wrap{max-width:var(--max-width);margin:0 auto;padding:0 var(--container-pad);text-align:center}
+    .products h3{margin:0;color:#111;font-size:28px}
+    .carousel{margin-top:22px;position:relative;overflow:hidden}
+    .carousel-track{display:flex;gap:18px;transition:transform .45s cubic-bezier(.2,.9,.2,1)}
+    .card{
+      background:#fff;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.08);
+      min-width:280px;flex:0 0 32%;padding:18px;text-align:left;color:#111;
+      display:flex;flex-direction:column;gap:12px;align-items:stretch;
+    }
+    .card img{width:100%;height:160px;object-fit:cover;border-radius:6px}
+    .price{color:var(--accent);font-weight:700}
+    .card .btn{background:var(--accent);color:#111;padding:10px;border-radius:6px;text-align:center;font-weight:700}
+
+    .carousel-controls{display:flex;justify-content:center;gap:10px;margin-top:18px}
+    .dot{width:10px;height:10px;border-radius:50%;background:#d0d0d0;display:inline-block;opacity:0.7}
+    .dot.active{background:var(--accent)}
+
+    /* Footer */
+    footer{padding:28px 0;text-align:center;color:var(--muted);background:#010101}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero h1{font-size:36px}
+      .card{flex:0 0 48%}
+    }
+    @media (max-width:600px){
+      .card{flex:0 0 100%}
+      nav ul{display:none}
+      .hero{min-height:460px}
+      .logo img{height:34px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="nav-inner">
+      <!-- Tombol Back -->
+      <button class="back-btn" onclick="history.back()">← Back</button>
+
+      <div class="logo">
+        <div class="logo"></div>
+        <div style="font-size:12px;color:var(--muted)"></div>
+      </div>
+      <nav>
+        <ul>
+          <!-- Contact diarahkan ke index.html bagian contact -->
+          <li><a href="index.html#Kontak" class="btn">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" aria-label="Hero image">
+    <div class="hero-inner">
+      <div class="left">
+        <h1>Salalalala</h1>
+        <p class="lead">Kami menyediakan produk dengan harga yang terjangkau dan kami mengutamakan kualitas yang premium seperti slogan kami yang berbunyi "Where Premium Quality Meets Timeless Elegance"</p>
+        <div class="cta">
+          <a href="#products">Lihat Menu</a>
+        </div>
+      </div>
+      <div style="width:340px">
+        <img src="tentang kami - Copy.jpg" alt="barista" style="width:100%;border-radius:6px;box-shadow:0 10px 30px rgba(0,0,0,0.6)">
+      </div>
+    </div>
+  </section>
+
+  <!-- Best seller & promo -->
+  <section id="products" class="products">
+    <div class="wrap">
+      <h3>MENU</h3>
+      <p style="color:#666;margin-top:8px">Frozen food dengan kualitas terbaik dan harga yang terjangkau</p>
+      <div class="carousel" style="margin-top:30px">
+        <div class="carousel-track" id="carouselTrack">
+          <!-- card 1 -->
+          <div class="card">
+            <img src="sosis.jpg" alt="Mix Platter">
+            <div style="flex:1">
+              <div class="price">Rp 34.500</div>
+              <h4 style="margin:6px 0 0">Sosis</h4>
+            </div>
+            <div><a class="btn" href="#products">Order Now</a></div>
+          </div>
+          <!-- card 2 -->
+          <div class="card">
+            <img src="suki suki.jpg" alt="Ice Cream">
+            <div style="flex:1">
+              <div class="price">Rp 29.000</div>
+              <h4 style="margin:6px 0 0">Suki-suki</h4>
+            </div>
+            <div><a class="btn" href="#products">Order Now</a></div>
+          </div>
+          <!-- card 3 -->
+          <div class="card">
+            <img src="daging.jpg" alt="Waffle">
+            <div style="flex:1">
+              <div class="price">Rp 31.000</div>
+              <h4 style="margin:6px 0 0">Daging</h4>
+            </div>
+            <div><a class="btn" href="#products">Order Now</a></div>
+          </div>
+          <!-- card 4 -->
+          <div class="card">
+            <img src="makanan 2.jpg" alt="Waffle">
+            <div style="flex:1">
+              <div class="price">Rp 31.000</div>
+              <h4 style="margin:6px 0 0">Sea food Frozen</h4>
+            </div>
+            <div><a class="btn" href="#products">Order Now</a></div>
+          </div>
+        </div>
+        <!-- dots -->
+        <div class="carousel-controls" id="carouselDots" style="margin-top:16px">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; <span id="year"></span> Salalalala frozen food
+  </footer>
+
+  <script>
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    /* Simple carousel logic */
+    (function(){
+      const track = document.getElementById('carouselTrack');
+      const dots = Array.from(document.querySelectorAll('#carouselDots .dot'));
+      const cardCount = track.children.length;
+      let idx = 0;
+
+      function update(){
+        const cardWidth = track.children[0].getBoundingClientRect().width + 18;
+        const visible = Math.floor((document.querySelector('.carousel').offsetWidth) / cardWidth);
+        const maxIndex = Math.max(0, cardCount - visible);
+        if(idx < 0) idx = 0;
+        if(idx > maxIndex) idx = maxIndex;
+        track.style.transform = 'translateX(' + (-idx * cardWidth) + 'px)';
+        dots.forEach(d => d.classList.remove('active'));
+        const activeDot = Math.min(idx, dots.length-1);
+        dots[activeDot].classList.add('active');
+      }
+
+      dots.forEach(d => d.addEventListener('click', e=>{
+        idx = Number(e.currentTarget.dataset.index);
+        update();
+      }));
+
+      let auto = setInterval(()=> {
+        idx = (idx + 1) % cardCount;
+        update();
+      }, 5000);
+
+      document.querySelector('.carousel').addEventListener('mouseenter', ()=> clearInterval(auto));
+      document.querySelector('.carousel').addEventListener('mouseleave', ()=> {
+        auto = setInterval(()=> { idx = (idx + 1) % cardCount; update(); }, 5000);
+      });
+
+      window.addEventListener('resize', update);
+      setTimeout(update, 200);
+    })();
+  </script>
+</body>
+</html>
